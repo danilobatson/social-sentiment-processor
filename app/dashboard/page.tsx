@@ -16,7 +16,7 @@ export default function Dashboard() {
 	const [progress, setProgress] = useState(0);
 	const [currentStep, setCurrentStep] = useState('');
 	const [selectedCoins, setSelectedCoins] = useState<string[]>(
-		MONITORED_COINS as string[]
+		[...MONITORED_COINS]
 	);
 	const [lastAnalysisResults, setLastAnalysisResults] = useState<{
 		processed: string[];
@@ -74,11 +74,11 @@ export default function Dashboard() {
 					.filter((entry) => new Date(entry.created_at) >= cutoffTime)
 					.map((entry) => entry.symbol);
 
-				const foundCoins = [...new Set(latestAnalysisCoins)];
+				const foundCoins = Array.from(new Set(latestAnalysisCoins));
 				const processed =
 					selectedCoins.length > 0
 						? selectedCoins
-						: (MONITORED_COINS as string[]);
+						: [...MONITORED_COINS];
 				const missing = processed.filter((coin) => !foundCoins.includes(coin));
 
 				setLastAnalysisResults({

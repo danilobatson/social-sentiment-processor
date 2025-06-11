@@ -43,10 +43,8 @@ export const processSentimentData = inngest.createFunction(
 					// Get recent sentiment history for comparison
 					const recentHistory = await getRecentSentiment(coin.symbol, 24);
 					const previousSentiment =
-						recentHistory.length > 0 ? recentHistory[0].sentiment : undefined;
-
-					// Detect sentiment changes
-					let changeType = 'normal';
+						recentHistory.length > 0 ? recentHistory[0].sentiment : undefined;				// Detect sentiment changes
+				let changeType: 'spike' | 'drop' | 'normal' = 'normal';
 
 					if (previousSentiment) {
 						// Compare with historical data
