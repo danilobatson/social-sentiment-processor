@@ -21,6 +21,9 @@ A scalable cryptocurrency sentiment processing system built with Next.js, TypeSc
 - **Production Ready** - Comprehensive error handling and retry logic
 - **Mobile Responsive** - Modern UI with Tailwind CSS
 
+![Social Sentiment Dashboard](docs/screenshots/demo.gif)
+
+
 ## 🚀 Quick Start
 
 ### Option 1: One-Click Deploy
