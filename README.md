@@ -396,7 +396,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ## 📚 Resources
 
-- **[Tutorial Article](https://dev.to/lunarcrush/inngest-typescript-tutorial)** - Step-by-step tutorial
+- **[Tutorial Article](https://dev.to/dbatson/queue-social-data-processing-with-inngest-typescript-in-15-minutes-2ni2)** - Step-by-step tutorial
 - **[Live Demo](https://social-sentiment-processor.vercel.app/dashboard)** - Working example
 - **[LunarCrush API Docs](https://lunarcrush.com/about/api)** - API documentation
 - **[Inngest Documentation](https://www.inngest.com/docs)** - Background job guides
