@@ -15,9 +15,9 @@ export default function Dashboard() {
 	const [isProcessing, setIsProcessing] = useState(false);
 	const [progress, setProgress] = useState(0);
 	const [currentStep, setCurrentStep] = useState('');
-	const [selectedCoins, setSelectedCoins] = useState<string[]>(
-		[...MONITORED_COINS]
-	);
+	const [selectedCoins, setSelectedCoins] = useState<string[]>([
+		...MONITORED_COINS,
+	]);
 	const [lastAnalysisResults, setLastAnalysisResults] = useState<{
 		processed: string[];
 		found: string[];
@@ -39,6 +39,7 @@ export default function Dashboard() {
 	useEffect(() => {
 		fetchJobs();
 		fetchRecentSentiment();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const fetchJobs = async () => {
@@ -76,9 +77,7 @@ export default function Dashboard() {
 
 				const foundCoins = Array.from(new Set(latestAnalysisCoins));
 				const processed =
-					selectedCoins.length > 0
-						? selectedCoins
-						: [...MONITORED_COINS];
+					selectedCoins.length > 0 ? selectedCoins : [...MONITORED_COINS];
 				const missing = processed.filter((coin) => !foundCoins.includes(coin));
 
 				setLastAnalysisResults({
