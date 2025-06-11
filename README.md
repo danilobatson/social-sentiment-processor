@@ -8,6 +8,9 @@
 
 A scalable cryptocurrency sentiment processing system built with Next.js, TypeScript, Inngest, and Supabase. Monitors sentiment trends across hundreds of cryptocurrencies using background job processing to prevent blocking your main application.
 
+
+![Social Sentiment Dashboard](docs/screenshots/dashboard.png)
+
 ## 🎯 Features
 
 - **Background Job Processing** - Queue-based sentiment analysis with Inngest
