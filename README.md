@@ -3,7 +3,6 @@
 > A production-ready cryptocurrency sentiment analysis system with background job processing
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/danilobatson/social-sentiment-processor)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://typescriptlang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)](https://nextjs.org/)
 
@@ -23,13 +22,13 @@ A scalable cryptocurrency sentiment processing system built with Next.js, TypeSc
 
 ### Option 1: One-Click Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lunarcrush/social-sentiment-processor)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/danilobatson/social-sentiment-processor)
 
 ### Option 2: Local Development
 
 ```bash
 # Clone the repository
-git clone https://github.com/lunarcrush/social-sentiment-processor.git
+git clone https://github.com/danilobatson/social-sentiment-processor.git
 cd social-sentiment-processor
 
 # Install dependencies
@@ -196,7 +195,6 @@ npm run db:setup     # Initialize database schema
 npm run db:reset     # Reset all data (development only)
 
 # Testing
-npm run test         # Run test suite
 npm run type-check   # TypeScript validation
 npm run lint         # ESLint validation
 
@@ -263,7 +261,6 @@ npm run deploy       # Deploy to Vercel
 | ------------------- | -------- | ---------------------------- |
 | `/api/trigger`      | POST     | Start sentiment analysis job |
 | `/api/inngest`      | POST/PUT | Inngest webhook handler      |
-| `/api/test-discord` | POST     | Test Discord integration     |
 | `/dashboard`        | GET      | Main monitoring interface    |
 
 ### Monitoring & Alerts
@@ -272,28 +269,6 @@ npm run deploy       # Deploy to Vercel
 - **Error Handling:** Automatic retries with exponential backoff
 - **Discord Notifications:** Configurable sentiment change alerts
 - **Performance Metrics:** Processing time and success rates
-
-## 🧪 Testing
-
-### Test Configuration
-
-```bash
-# Run all tests
-npm run test
-
-# Run specific test suites
-npm run test:unit        # Unit tests
-npm run test:integration # Integration tests
-npm run test:api         # API endpoint tests
-```
-
-### Test Coverage
-
-- ✅ API client error handling
-- ✅ Database operations
-- ✅ Inngest function logic
-- ✅ Discord webhook integration
-- ✅ TypeScript type validation
 
 ## 🛠️ Troubleshooting
 
@@ -411,9 +386,6 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 - [ ] Error messages don't leak sensitive data
 - [ ] Rate limiting implemented for public endpoints
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -426,14 +398,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **[Tutorial Article](https://dev.to/lunarcrush/inngest-typescript-tutorial)** - Step-by-step tutorial
 - **[Live Demo](https://social-sentiment-processor-demo.vercel.app)** - Working example
-- **[LunarCrush API Docs](https://lunarcrush.com/developers/api/endpoints)** - API documentation
+- **[LunarCrush API Docs](https://lunarcrush.com/about/api)** - API documentation
 - **[Inngest Documentation](https://www.inngest.com/docs)** - Background job guides
 - **[Supabase Documentation](https://supabase.com/docs)** - Database and auth guides
 
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/lunarcrush/social-sentiment-processor/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/lunarcrush/social-sentiment-processor/discussions)
+- **Issues:** [GitHub Issues](https://github.com/danilobatson/social-sentiment-processor/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/danilobatson/social-sentiment-processor/discussions)
 - **Discord:** [LunarCrush Developer Community](https://discord.gg/lunarcrush)
 - **Email:** [developers@lunarcrush.com](mailto:developers@lunarcrush.com)
 
@@ -441,6 +413,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**[⭐ Star this repo](https://github.com/lunarcrush/social-sentiment-processor)** • **[🍴 Fork it](https://github.com/lunarcrush/social-sentiment-processor/fork)** • **[📝 Report Bug](https://github.com/lunarcrush/social-sentiment-processor/issues)**
+**[⭐ Star this repo](https://github.com/danilobatson/social-sentiment-processor)** • **[🍴 Fork it](https://github.com/danilobatson/social-sentiment-processor/fork)** • **[📝 Report Bug](https://github.com/danilobatson/social-sentiment-processor/issues)**
 
 </div>
