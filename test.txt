@@ -1,0 +1,49 @@
+create table public.sentiment_history (
+  id uuid not null default gen_random_uuid (),
+  symbol character varying(10) not null,
+  sentiment integer not null,
+  price numeric(20, 8) not null,
+  interactions_24h bigint not null,
+  percent_change_24h numeric(10, 4) not null,
+  galaxy_score numeric(5, 2) not null,
+  created_at timestamp with time zone null default now(),
+  previous_sentiment integer null,
+  constraint sentiment_history_pkey primary key (id)
+) TABLESPACE pg_default;
+
+create index IF not exists idx_sentiment_history_symbol on public.sentiment_history using btree (symbol) TABLESPACE pg_default;
+
+create index IF not exists idx_sentiment_history_created_at on public.sentiment_history using btree (created_at) TABLESPACE pg_default;
+
+create index IF not exists idx_sentiment_history_symbol_created_at on public.sentiment_history using btree (symbol, created_at desc) TABLESPACE pg_default;
+
+
+create table public.processing_jobs (
+  id uuid not null default gen_random_uuid (),
+  status character varying(20) not null,
+  coins_processed integer null default 0,
+  alerts_generated integer null default 0,
+  duration_ms integer null,
+  error_message text null,
+  created_at timestamp with time zone null default now(),
+  completed_at timestamp with time zone null,
+  constraint processing_jobs_pkey primary key (id),
+  constraint processing_jobs_status_check check (
+    (
+      (status)::text = any (
+        (
+          array[
+            'pending'::character varying,
+            'processing'::character varying,
+            'completed'::character varying,
+            'failed'::character varying
+          ]
+        )::text[]
+      )
+    )
+  )
+) TABLESPACE pg_default;
+
+create index IF not exists idx_processing_jobs_status on public.processing_jobs using btree (status) TABLESPACE pg_default;
+
+create index IF not exists idx_processing_jobs_created_at on public.processing_jobs using btree (created_at) TABLESPACE pg_default;
